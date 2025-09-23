@@ -12,5 +12,6 @@
 
 <template>
     <!-- add code here -->
-    <img v-bind:src="myImg" :width="width" :height="height"></img>
+    <!-- : is a short-hand notation of v-bind -->
+    <img v-bind:src="myImg" :width="width" :height="height" />
 </template>
