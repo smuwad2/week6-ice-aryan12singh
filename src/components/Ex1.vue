@@ -1,7 +1,15 @@
 <script>
-    export default { 
+    export default {
         // Add Code Here
         // challenge: use array  
+        data() {
+            return {
+            message: "Choose your favorite fruit:",
+            fruit1: "apple",
+            fruit2: "orange",
+            fruit3: "peach",
+            }
+        }
     }
 </script>
 
@@ -15,4 +23,10 @@
 </template>
 
 <style scoped>
+    div {
+    margin: 10px 0;
+    }
+    label {
+    margin-left: 5px;
+    }
 </style>
