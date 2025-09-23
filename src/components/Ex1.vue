@@ -1,13 +1,12 @@
 <script>
     export default {
         // Add Code Here
-        // challenge: use array  
         data() {
             return {
             message: "Choose your favorite fruit:",
-            fruit1: "apple",
-            fruit2: "orange",
-            fruit3: "peach",
+
+        // challenge: use array  
+        fruits: ["apple", "orange", "peach"],
             }
         }
     }
@@ -19,6 +18,9 @@
         {{ fruit1 }} <input type="radio" name="fruit">
         {{ fruit2 }} <input type="radio" name="fruit">
         {{ fruit3 }} <input type="radio" name="fruit">
+        <div v-for="fruit in fruits"> 
+            {{fruit}} <input type="radio" name="fruit" :value="fruit"></input>
+        </div>
     </div>
 </template>
 
