@@ -2,26 +2,27 @@
     export default { 
         data() {
             return {
-                // Add code here
+                isRed: false,
+                id: 'demo1'
             }
         },
         methods: { 
-   			// Add code here
-		}
+            toggleColor() {
+                this.isRed = !this.isRed;
+            }
+        }
     }
 </script>
 
 <template>
-    
     <!-- Modify code here -->
     <div class="container">
-        <div v-bind:id="id" class="m-2">
+        <div v-bind:id="id" v-bind:class="isRed ? 'redBox m-2' : 'blueBox m-2'">
             div ID : {{id}} 
         </div>
         
-        <button type="button">Change Color</button>
+        <button type="button" v-bind:class="isRed ? 'btn btn-danger' : 'btn btn-secondary'" v-on:click="toggleColor">Change Color</button>
     </div>
-
 </template>
 
 <style scoped>
